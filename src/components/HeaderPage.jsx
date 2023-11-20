@@ -39,11 +39,11 @@ const HeaderPage = () => {
                     <Nav>
                         {/** 로그인 case별 분기 */}
                         {   /** admin일때 */
-                            sessionStorage.getItem('user_id') === 'admin' && 
+                            sessionStorage.getItem('user_id') === '21' && 
                             <NavLink href="#">adminpage</NavLink>
                         }
                         {   /** admin이외 user로그인 */
-                            sessionStorage.getItem('user_id') && sessionStorage.getItem('user_id') !== 'admin' && 
+                            sessionStorage.getItem('user_id') && sessionStorage.getItem('user_id') !== '21' && 
                             <>
                             <NavLink href="/user/mypage">mypage(user)</NavLink>
                             <NavLink onClick={onLogout} href="/user/signin">logout (user)</NavLink>
